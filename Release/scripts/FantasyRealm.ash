@@ -1,5 +1,6 @@
 import "scripts/gain.ash";
-string __fantasyrealm_version = "1.2.2";
+// add interjector import here
+string __fantasyrealm_version = "1.2.3";
 boolean __setting_bosses_ready = true;
 
 
@@ -705,6 +706,7 @@ void FantasyRealmAdventure(location l, int take_choice_id, int take_choice_optio
         run_turn();
     }
     else
+		cli_execute("interjector nofam");
 	    adv1(l, 0, combat_macro);
     
     string last_encounter = get_property("lastEncounter");
